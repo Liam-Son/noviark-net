@@ -1,0 +1,16 @@
+{
+  "name": "Noviark",
+  "short_name": "Noviark",
+  "description": "Tools for a better life.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#101e2a",
+  "theme_color": "#101e2a",
+  "icons": [
+    {
+      "src": "/noviark-logo.png",
+      "sizes": "600x600",
+      "type": "image/png"
+    }
+  ]
+}
