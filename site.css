@@ -56,3 +56,51 @@ h2{font-size:clamp(1.8rem,3.2vw,2.7rem);font-weight:620;letter-spacing:-.055em;l
 .footer-links a:hover{color:#c4f26e}
 @media(max-width:760px){.shell{width:min(100% - 36px,1140px)}.site-header{align-items:flex-start;flex-direction:column;gap:16px;padding:18px 0}.brand img{width:34px;height:34px}.nav{gap:9px 18px}.nav a{font-size:.9rem}.hero{padding:60px 0 45px}.section{padding:42px 0 58px}.section-head{display:block}.section-head p{margin-top:12px}.grid{grid-template-columns:1fr}.card{min-height:205px}.project-feature{grid-template-columns:1fr;gap:18px}.item{grid-template-columns:1fr;gap:9px;padding:28px 0}.footer{display:block}.footer-links{margin-top:12px;flex-wrap:wrap}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card{transition:none}.card:hover{transform:none}}
+
+
+/* BTD Commando card only — military ops box on Noviark hub */
+.card.btd-mil{
+  position:relative;
+  background:linear-gradient(165deg,#1a2418 0%,#121a14 45%,#0e1410 100%);
+  border:2px solid #c9a227;
+  box-shadow:0 0 0 1px #3d4a2e, inset 0 1px 0 rgba(255,220,120,.08), 0 12px 40px rgba(0,0,0,.35);
+  overflow:hidden;
+}
+.card.btd-mil::before{
+  content:"";
+  position:absolute;inset:0;
+  background:
+    repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,0,0,.04) 3px,rgba(0,0,0,.04) 4px);
+  pointer-events:none;
+  opacity:.5;
+}
+.card.btd-mil > *{position:relative;z-index:1}
+.btd-mil-top{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+.btd-mil-tag{
+  display:inline-block;
+  font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;
+  padding:3px 8px;border:1px solid #c9a227;color:#f0d878;background:rgba(201,162,39,.12)
+}
+.btd-mil-tag.dim{border-color:#5a6b4a;color:#9aab88;background:rgba(90,107,74,.15)}
+.btd-mil-meta{color:#9aab88!important;letter-spacing:.06em}
+.btd-mil-title{
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:1.45rem;letter-spacing:.08em;text-transform:uppercase;
+  color:#f0d878!important;margin:.35rem 0 .75rem;
+  text-shadow:0 0 18px rgba(201,162,39,.25)
+}
+.btd-mil-media{border:1px solid #5a6b4a;background:#0a0e0a;margin:0 0 12px}
+.btd-mil-media img{display:block;width:100%;height:auto;image-rendering:auto}
+.btd-mil-media figcaption{color:#7a8b6a;font-size:11px;padding:8px 10px;border-top:1px solid #3d4a2e}
+.btd-mil-body{color:#c5d4b8;font-size:.95rem;line-height:1.55}
+.btd-mil-body code{color:#f0d878;font-size:.9em}
+.btd-mil-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.btd-mil-btn{
+  display:inline-flex;align-items:center;
+  padding:7px 12px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  text-decoration:none!important;
+  border:1px solid #5a6b4a;color:#d4e0c4!important;background:rgba(0,0,0,.25)
+}
+.btd-mil-btn:hover{border-color:#c9a227;color:#f0d878!important;background:rgba(201,162,39,.1)}
+.btd-mil-btn.primary{border-color:#c9a227;background:#c9a227;color:#1a1a10!important}
+.btd-mil-btn.primary:hover{background:#e0bc3a;color:#0e0e08!important}
